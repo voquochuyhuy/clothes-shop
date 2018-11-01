@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+      body{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 16px;
+         
+      }
+      .modal{
+          width: auto;
+          position: fixed;
+          top :150px;
+          left: 100px;
+      }
+      
+      #control{
+          height: auto;
+          margin-bottom: 0px;
+      }
+     
+       #carousel-id{         
+           height: 700px;
+           margin-top:100px;
+       }
+       .item-in-carousel{
+           width: 100%;
+           height: 700px !important;
+           
+       }
+       #list{
+           margin-top: 50px;
+       }
+       div >img {
+           width: 100%;
+           /* height: auto; */
+           margin-left: 0;
+           margin-right: 50px;
+       }
+       #celeb-user-comment {
+        margin-top: 50px;
+        margin-left: -15px;
+        background-color: aqua;
+        /* margin-right: -15px; */
+        
+       }
+       #user-comment{
+          
+           
+           
+       }
+       #chatbot{
+          align-content: center;
+       }
+       .Celebrities{
+           background-size: cover;
+       }
+       .avatar{
+           width: 50px;
+           height: 50px;
+       }
+       .img-circle{
+           width: 70px;
+           height: 50px;
+           margin-top: 50px;
+           margin-left: 50px;
+           
+       }
+       #footer{
+           margin-top: 50px;
+           background-color: rgb(0, 0, 43);
+           color: white;  
+       }
+      .addToCart{
+          position: absolute;
+          top :70%;
+          
+          width:93% ;
+      }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" id="control">
+  <div class="container-fluid" >        
+    <form class="navbar-form navbar-left" action="/action_page.php">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search everything" name="search">
+          <div class="input-group-btn">
+            <button class="btn btn-default" type="submit">
+                
+              <i class="glyphicon glyphicon-search"></i>
+            </button>
+          </div>
+        </div>
+    </form>
+      
+    <ul class="nav navbar-nav navbar-center">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Page 1-1</a></li>
+                <li><a href="#">Page 1-2</a></li>
+                <li><a href="#">Page 1-3</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+    </ul>
+      
+    <form class="navbar-form navbar-right" action="/action_page.php">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Leave your number and we will contact" name="search">
+            <div class="input-group-btn">
+            <button class="btn btn-default" type="submit">
+              <i class="glyphicon glyphicon-earphone"></i>
+            </button>
+          </div>
+        </div>
+        <button type="submit"  class="btn btn-success"><i class="glyphicon glyphicon-shopping-cart"></i>Cart</button>
+      </form>            
+  </div>
+</nav>
+
+<div id="carousel-id" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-id" data-slide-to="0" class=""></li>
+        <li data-target="#carousel-id" data-slide-to="1" class=""></li>
+        <li data-target="#carousel-id" data-slide-to="2" class="active"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item">
+            <img class="item-in-carousel" src="https://dyn3.tailorstore.com/MjAwMHx8OTB8ZmZmZmZm/images/cms/Major-app.jpg" alt="">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Example headline.</h1>
+                    <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                    
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <img class="item-in-carousel" data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="Second slide" src="https://dyn3.tailorstore.com/MTEwMHx8OTB8ZmZmZmZm/images/cms/Header-svarta-skjortor-2.jpg">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Another example headline.</h1>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="item active">
+            <img class="item-in-carousel" data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="Third slide" src="https://dyn2.tailorstore.com/NTMwfDUzMHx8ZmZmZmZm/images/catalog/mens-shirt-venezia-black-detail-12311%20B.jpg">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>One more for good measure.</h1>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+
+
+<div class="container-fluid" id="list">
+        <div class="row">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <img class="listItem" src="https://dyn4.tailorstore.com/NTMwfDUzMHx8ZmZmZmZm/images/catalog/12466%20-%20Herrskjorta%20-%20Islington,%20white.jpg" alt="áđá">  
+                
+                <a class="btn btn-primary addToCart" data-toggle="modal" href='#modal-id'>Add to cart</a>
+                <div class="modal fade" id="modal-id">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">Modal title</h4>
+                            </div>
+                            <div class="modal-body">
+                                
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <img class="listItem" src="https://dyn2.tailorstore.com/NTMwfDUzMHx8ZmZmZmZm/images/catalog/4876-islington-white-men-s-shirt-folded-tailor-store.jpg" alt="áđá">
+                <a class="btn btn-primary addToCart" data-toggle="modal" href='#modal-id'>Add to cart</a>
+                <div class="modal fade" id="modal-id">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">Modal title</h4>
+                            </div>
+                            <div class="modal-body">
+                                
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <img class="listItem" src="https://dyn4.tailorstore.com/NTMwfDUzMHx8ZmZmZmZm/images/catalog/12662-islington-light-blue-men-s-shirt-folded-tailor-store.jpg" alt="áđá">
+                <a class="btn btn-primary addToCart" data-toggle="modal" href='#modal-id'>Add to cart</a>
+                <div class="modal fade" id="modal-id">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">Modal title</h4>
+                            </div>
+                            <div class="modal-body">
+                                
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">                                      
+                    <img class="listItem" src="https://dyn4.tailorstore.com/NTMwfDUzMHx8ZmZmZmZm/images/catalog/4272%20-%20Herrskjorta%20-%20Liberty%20Art,%20blue%20wild%20flowers%2012618.jpg" alt="áđá"> 
+                    <a class="btn btn-primary addToCart" data-toggle="modal" href='#modal-id'>Add to cart</a>
+                    <div class="modal fade" id="modal-id">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title">Modal title</h4>
+                                </div>
+                                <div class="modal-body">
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                                                                    
+                 </div>
+                 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <img class="listItem" src="https://dyn2.tailorstore.com/NTMwfDUzMHx8ZmZmZmZm/images/catalog/4334%20-%20Herrskjorta%20-%20Wilson,%20blue%20and%20red%2012521.jpg" alt="áđá">
+                    <a class="btn btn-primary addToCart" data-toggle="modal" href='#modal-id'>Add to cart</a>
+                    <div class="modal fade" id="modal-id">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title">Modal title</h4>
+                                </div>
+                                <div class="modal-body">
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <img class="listItem" src="https://dyn3.tailorstore.com/NTMwfDUzMHx8ZmZmZmZm/images/catalog/3728%20-%20Herrskjorta%20-%20Godina,%20navy%2012505.jpg" alt="áđá">
+                    <a class="btn btn-primary addToCart" data-toggle="modal" href='#modal-id'>Add to cart</a>
+                    <div class="modal fade" id="modal-id">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title">Modal title</h4>
+                                </div>
+                                <div class="modal-body">
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+</div>
+
+
+ 
+<div id="celeb-user-comment" class="container-fluid">         
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">                 
+              <img class="Celebrities" src="../img/Celebrities.jpg" alt="ddeso co"> 
+                              
+                               
+        </div> 
+        <div id="user-comment" class="col-xs-6 col-sm-6 col-md-6 col-lg-6"> 
+            <div>
+                <h3>REVIEW OF CUSTOMER</h3>
+            </div>                
+            <div class="media">
+                    <div class="media-left">
+                         <img class="avatar" src="../img/avatar1.jpg" class="media-object" >
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">John Doe</h4>
+                        <p>Lorem ipsum...</p>
+                    </div>
+                </div> 
+                <div class="media">
+                    <div class="media-left">
+                        <img class="avatar" src="../img/avatar2.jpg" class="media-object" >
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">John Doe</h4>
+                        <p>Lorem ipsum...</p>
+                    </div>
+                </div> 
+                <div class="media">
+                    <div class="media-left">
+                        <img class="avatar" src="../img/avatar3.jpg" class="media-object">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">John Doe</h4>
+                        <p>Lorem ipsum...</p>
+                    </div>
+                </div>  
+                
+                <form action="" method="POST" role="form">
+                    <legend>Form title</legend>
+                
+                    <div class="form-group">
+                        <label for="">label</label>
+                        <input type="text" class="form-control" id="" placeholder="Input field">
+                    </div>
+                
+                    
+                
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                                             
+        </div>             
+    </div>                                   
+</div>    
+<div id="footer" class="container-fluid">         
+    <div class="row">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">                 
+            <div>
+                <h1>Store</h1>
+                <p>About us</p>
+                <p>Jobs</p>
+                <p>Gift Certificate</p>
+            </div>  
+            <div>
+                <h1>Store</h1>
+                <p>About us</p>
+                <p>Jobs</p>
+                <p>Gift Certificate</p>
+            </div>                  
+        </div> 
+        
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <div>
+                <h1>Store</h1>
+                <p>About us</p>
+                <p>Jobs</p>
+                <p>Gift Certificate</p>
+            </div>
+            <div>
+                <h1>Store</h1>
+                <p>About us</p>
+                <p>Jobs</p>
+                <p>Gift Certificate</p>
+            </div>
+        </div>
+        
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"> 
+                           
+            <img class="img-circle" src="../img/paypal.png" alt="">
+            <img class="img-circle" src="../img/visa.png" alt="">
+            <img class="img-circle" src="../img/mastercard.png" alt="">
+            <img class="img-circle" src="../img/facebook.png" alt="">
+                             
+        </div>             
+    </div>            
+ </div>  
+ 
+ 
+     
+     
+     
+     
+     
+       
+        
+
+  
+    
+              
+
+
+
+
+
+
+
+
+  
+
+
+</body>
+</html>
